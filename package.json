@@ -1,5 +1,5 @@
 {
-  "name": "@selectize/selectize",
+  "name": "@coderevivehq/selectize",
   "keywords": [
     "select",
     "ui",
@@ -11,8 +11,9 @@
     "tag",
     "jquery-plugin"
   ],
+  "main": "dist/js/selectize.js",
   "browser": "dist/js/selectize.js",
-  "description": "Selectize is a jQuery-based custom <select> UI control. Useful for tagging, contact lists, country selectors, etc.",
+  "description": "Community-maintained fork of Selectize, a jQuery-based custom select UI control.",
   "version": "0.15.2",
   "author": "Brian Reavis <brian@thirdroute.com>",
   "contributors": [
@@ -21,7 +22,14 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/selectize/selectize.js.git"
+    "url": "https://github.com/coderevivehq/selectize.js.git"
+  },
+  "homepage": "https://github.com/coderevivehq/selectize.js#readme",
+  "bugs": {
+    "url": "https://github.com/coderevivehq/selectize.js/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist/*"
@@ -78,6 +86,7 @@
   "scripts": {
     "test": "karma start",
     "build": "gulp",
+    "prepack": "npm run build",
     "clean": "rm -rf dist coverage node_modules docs/node_modules && cd docs && npm run clear",
     "docs": "gulp docs",
     "start": "cd docs && HTTPS=true SSL_CRT_FILE=.ssl/loopback_website.crt SSL_KEY_FILE=.ssl/loopback_website.key npm run start -- --host=loopback.website --port=4000",
