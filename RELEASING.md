@@ -36,3 +36,5 @@ The npm package must exist before trusted publishing can be connected.
 After this setup, future releases do not need an npm token.
 
 The `npm` environment requires approval before publishing. The build and tests run without publishing permission. The publishing job does not check out or execute project code.
+
+Dependency lifecycle scripts are disabled by default in `.npmrc`. Run project scripts explicitly with `npm run`.
