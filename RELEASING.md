@@ -31,6 +31,8 @@ The npm package must exist before trusted publishing can be connected.
 5. Use organization `coderevivehq`.
 6. Use repository `selectize.js`.
 7. Use workflow `publish.yml`.
-8. Leave the environment blank.
+8. Use environment `npm`.
 
 After this setup, future releases do not need an npm token.
+
+The `npm` environment requires approval before publishing. The build and tests run without publishing permission. The publishing job does not check out or execute project code.
