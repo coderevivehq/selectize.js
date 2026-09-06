@@ -3,6 +3,13 @@
 <!-- Feel free to put either your handle and/or full name, according to
      your privacy needs -->
 
+## v0.15.3 · 06 09 2026
+
+- First CodeReviveHQ maintained release under `@coderevivehq/selectize`.
+- Includes accumulated fixes and improvements since v0.15.2.
+- Refreshes development dependencies and security tooling.
+- Adds protected npm publishing through GitHub Actions.
+
 ## v0.15.1 · 17 11 2022
 
 - New feature: dynamically add option groups
