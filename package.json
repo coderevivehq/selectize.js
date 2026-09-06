@@ -14,7 +14,7 @@
   "main": "dist/js/selectize.js",
   "browser": "dist/js/selectize.js",
   "description": "Community-maintained fork of Selectize, a jQuery-based custom select UI control.",
-  "version": "0.15.3",
+  "version": "0.15.4",
   "author": "Brian Reavis <brian@thirdroute.com>",
   "contributors": [
     "Ris Adams <selectize@risadams.com>"

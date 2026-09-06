@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/static/img/selectize-coderevive.png" alt="Selectize.js revived and maintained by CodeReviveHQ" width="460">
+  <img src="https://raw.githubusercontent.com/coderevivehq/selectize.js/master/docs/static/img/selectize-coderevive.png" alt="Selectize.js revived and maintained by CodeReviveHQ" width="460">
 </p>
 
 <h1 align="center">selectize.js</h1>
