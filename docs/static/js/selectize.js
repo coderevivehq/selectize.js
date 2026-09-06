@@ -1,9 +1,9 @@
 /**
- * Selectize (v0.15.2)
- * https://selectize.dev
+ * Selectize (v0.15.4)
+ * https://github.com/coderevivehq/selectize.js
  *
  * Copyright (c) 2013-2015 Brian Reavis & contributors
- * Copyright (c) 2020-2023 Selectize Team & contributors
+ * Copyright (c) 2020-2026 Selectize Team & contributors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
  * file except in compliance with the License. You may obtain a copy of the License at:
@@ -1190,6 +1190,10 @@ $.extend(Selectize.prototype, {
 		var defaultPrevented = e.isDefaultPrevented();
 		var $target = $(e.target);
 
+		if (e.button && e.button === 2) {
+			return;
+		}
+
 		if (!self.isFocused) {
 			if (!defaultPrevented) {
         window.setTimeout(function () {
@@ -1442,6 +1446,10 @@ $.extend(Selectize.prototype, {
 		if (e.preventDefault) {
 			e.preventDefault();
 			e.stopPropagation();
+		}
+
+		if (e.button && e.button === 2) {
+			return;
 		}
 
 		$target = $(e.currentTarget);
@@ -2891,8 +2899,8 @@ $.fn.selectize = function (settings_user) {
       }
 
       var option = readData($option) || {};
-      option[field_label] = option[field_label] || $option.text();
       option[field_value] = option[field_value] || value;
+      option[field_label] = option[field_label] || $option.text() || option[field_value];
       option[field_disabled] = option[field_disabled] || $option.prop('disabled');
       option[field_optgroup] = option[field_optgroup] || group;
       option.styles = $option.attr('style') || '';

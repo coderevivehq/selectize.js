@@ -18,22 +18,15 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Refer to us in your project's readme
 > - Mention us at local meetups and tell your friends/colleagues
 
-## Code of Conduct
-
-This project and everyone participating in it is governed by the
-[Contributor Code of Conduct](/code-of-conduct).
-By participating, you are expected to uphold this code. Please report unacceptable behavior
-to the [maintainers](mailto:selectize@risadams.com).
-
 ## I Have a Question
 
-> If you want to ask a question, we assume that you have read the available [Documentation](https://selectize.dev).
+> If you want to ask a question, we assume that you have read the available [Documentation](https://github.com/coderevivehq/selectize.js/tree/master/docs).
 
-Before you ask a question, it is best to search for existing [Issues](https://github.com/selectize/selectize.js/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
+Before you ask a question, it is best to search for existing [Issues](https://github.com/coderevivehq/selectize.js/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
 
 If you then still feel the need to ask a question and need clarification, we recommend the following:
 
-- Open an [Issue](https://github.com/selectize/selectize.js/issues/new).
+- Open an [Issue](https://github.com/coderevivehq/selectize.js/issues/new).
 - Provide as much context as possible about what problem you're experiencing.
 - Provide project and platform versions (nodejs, npm, etc.), depending on what seems relevant.
 
@@ -52,8 +45,8 @@ We will then take care of the issue as soon as possible.
 A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
 
 - Make sure that you are using the latest version.
-- Determine if your bug is a bug and not an error. e.g., using incompatible environment components/versions (Make sure that you have read the [documentation](https://selectize.dev). If you are looking for support, you might want to check [this section](#i-have-a-question)).
-- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/selectize/selectize.jsissues?q=label%3Abug).
+- Determine if your bug is a bug and not an error. e.g., using incompatible environment components/versions (Make sure that you have read the [documentation](https://github.com/coderevivehq/selectize.js/tree/master/docs). If you are looking for support, you might want to check [this section](#i-have-a-question)).
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/coderevivehq/selectize.js/issues?q=label%3Abug).
 - Make sure to search the internet (including Stack Overflow) to see if users outside the GitHub community have discussed the issue.
 - Collect information about the bug:
   - Stack trace (Traceback)
@@ -65,11 +58,11 @@ A good bug report shouldn't leave others needing to chase you up for more inform
 
 #### How Do I Submit a Good Bug Report?
 
-> You must never report security related issues, vulnerabilities or bugs including sensitive information to the issue tracker, or elsewhere in public. Instead sensitive bugs must be sent by email to .
+> You must never report security-related issues, vulnerabilities, or bugs including sensitive information to the issue tracker or elsewhere in public. Follow the [security policy](https://github.com/coderevivehq/selectize.js/security/policy) for private reports.
 
 We use GitHub issues to track bugs and errors. If you run into an issue with the project:
 
-- Open an [Issue](https://github.com/selectize/selectize.js/issues/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
+- Open an [Issue](https://github.com/coderevivehq/selectize.js/issues/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
 - Explain the behavior you would expect and the actual behavior.
 - Please provide as much context as possible and describe the _reproduction steps_ that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
 - Provide the information you collected in the previous section.
@@ -87,13 +80,13 @@ This section guides you through submitting an enhancement suggestion for Selecti
 #### Before Submitting an Enhancement
 
 - Make sure that you are using the latest version.
-- Read the [documentation](https://selectize.dev) carefully and find out if the functionality is already covered, maybe by an individual configuration.
-- Perform a [search](https://github.com/selectize/selectize.js/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
+- Read the [documentation](https://github.com/coderevivehq/selectize.js/tree/master/docs) carefully and find out if the functionality is already covered, maybe by an individual configuration.
+- Perform a [search](https://github.com/coderevivehq/selectize.js/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on/plugin library.
 
 #### How Do I Submit a Good Enhancement Suggestion?
 
-We track enhancement suggestions as [GitHub issues](https://github.com/selectize/selectize.js/issues).
+We track enhancement suggestions as [GitHub issues](https://github.com/coderevivehq/selectize.js/issues).
 
 - Use a **clear and descriptive title** for the issue to identify the suggestion.
 - Provide a **detailed description of the suggested enhancement** in as many details as possible.
@@ -107,12 +100,23 @@ We track enhancement suggestions as [GitHub issues](https://github.com/selectize
 
 Compile Javascript, SCSS and LESS in the `/src` directory to JavaScript and CSS in the `/build` directory.
 
-Running `make` will build the project, run all tests, and update the distribution files in `/dist`.
+Install dependencies, build the project, and run the test suite with:
 
-```bash npm2yarn
+```bash
+npm ci
 npm run build
+npm test
+```
 
-# Or to specify one or more specific browsers
+To build the documentation locally after building the library:
+
+```bash
+npm run docs
+```
+
+To specify one or more specific browsers when testing:
+
+```bash
 BROWSERS=Firefox,Chrome,Safari npm test
 ```
 
@@ -148,7 +152,7 @@ In addition, they should follow the [Conventional Commits](https://www.conventio
 If you're motivated to fix a bug or to develop a new feature, we'd love to see your code. When submitting pull requests, please remember the following:
 
 - **Make sure tests pass:** Run `npm test` to make sure your changes don't break existing functionality
-- **Do not make changes to files in `/dist` or `/docs/static/js`.** Limiting your edits to files in `/src` directories keeps the size of your pull request down and makes it easier for us to evaluate.
+- **Do not make changes to generated files in `/dist` or `/docs/static/js`.** Limiting your edits to files in `/src` directories keeps the size of your pull request down and makes it easier for us to evaluate.
   After your pull request is approved, we'll update these folders automatically.
 - **Add tests:** In the best-case scenario, you are adding tests to back up your changes, but don't sweat it if you don't. We can discuss them at a later date.
 - **Squash your commits** together in one or a few complete, logical commits

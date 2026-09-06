@@ -6,7 +6,7 @@ import { HeroBackground } from './HeroBackground'
 import blurCyanImage from '/img/blur-cyan.png'
 import blurIndigoImage from '/img/blur-indigo.png'
 
-const code = `npm install @selectize/selectize
+const code = `npm install @coderevivehq/selectize
 --
 <script>
 $(function () {
@@ -52,7 +52,7 @@ export function Hero() {
               </p>
               <div className="flex gap-4 mt-8 md:justify-center lg:justify-start">
                 <Button href="/docs/intro">Get started</Button>
-                <Button href="https://github.com/selectize/selectize.js" variant="secondary">View on GitHub</Button>
+                <Button href="https://github.com/coderevivehq/selectize.js" variant="secondary">View on GitHub</Button>
               </div>
             </div>
           </div>

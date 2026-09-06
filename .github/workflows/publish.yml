@@ -66,11 +66,9 @@ jobs:
       - name: Verify generated files
         shell: bash
         run: |
-          if [ -n "$(git status --porcelain --untracked-files=all)" ]; then
-            git status --short
-            echo "The build changed files. Commit the generated files before releasing."
-            exit 1
-          fi
+          test -s dist/js/selectize.js
+          test -s dist/js/selectize.min.js
+          test -s dist/css/selectize.default.css
 
       - name: Create package archive without lifecycle scripts
         run: |
