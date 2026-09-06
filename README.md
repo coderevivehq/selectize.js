@@ -2,19 +2,19 @@
 
 ![Selectize.js](docs/static/img/selectize-wordmark.png)
 
-→ Selectize is looking for [new members on the maintenance team](https://github.com/selectize/selectize.js/discussions/1678)!
+This is the CodeReviveHQ maintained fork of [Selectize](https://github.com/selectize/selectize.js).
 
-[![NPM version](http://img.shields.io/npm/v/@selectize/selectize.svg?style=flat)](https://www.npmjs.com/package/@selectize/selectize)
+[![NPM version](https://img.shields.io/npm/v/@coderevivehq/selectize.svg?style=flat)](https://www.npmjs.com/package/@coderevivehq/selectize)
 [![CDNJS version](http://img.shields.io/cdnjs/v/selectize.js.svg?style=flat)](https://cdnjs.com/libraries/selectize.js)
 \
-![Node.js CI](https://github.com/selectize/selectize.js/workflows/Node.js%20CI/badge.svg)
+[![Node.js CI](https://github.com/coderevivehq/selectize.js/actions/workflows/node.js.yml/badge.svg)](https://github.com/coderevivehq/selectize.js/actions/workflows/node.js.yml)
 \
 [![Discussion & Help](https://img.shields.io/badge/Discuss-Keybase-cc004c?style=flat)](https://keybase.io/team/selectize)
 
 Selectize is an extensible [jQuery](http://jquery.com/)-based custom `<select>`; UI control. It's useful for tagging, contact lists, country selectors, and so on. The goal is to provide a solid & usable experience with a clean and powerful API.
 
 - [Demos](https://selectize.dev/docs/demos)
-- [Changelog](https://github.com/selectize/selectize.js/releases)
+- [Changelog](https://github.com/coderevivehq/selectize.js/releases)
 - [Documentation](https://selectize.dev/docs/api)
 
 ## Features
@@ -49,7 +49,7 @@ Selectize is an extensible [jQuery](http://jquery.com/)-based custom `<select>`;
 
 ### Installation
 
-Selectize can be installed via NPM `npm install @selectize/selectize`
+Selectize can be installed via NPM `npm install @coderevivehq/selectize`
 
 #### Installing Manually
 
