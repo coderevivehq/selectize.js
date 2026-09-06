@@ -32,8 +32,8 @@ The project is based on the original [Selectize](https://github.com/selectize/se
 - [Browse files on jsDelivr](https://cdn.jsdelivr.net/npm/@coderevivehq/selectize@latest/)
 - [Releases and changelog](https://github.com/coderevivehq/selectize.js/releases)
 - [Report a bug or request a feature](https://github.com/coderevivehq/selectize.js/issues)
-- [Documentation](https://selectize.dev/docs/api)
-- [Demos](https://selectize.dev/docs/demos)
+- [Documentation](https://github.com/coderevivehq/selectize.js/tree/master/docs)
+- [Demos](https://github.com/coderevivehq/selectize.js/tree/master/docs)
 
 ## Installation
 
@@ -89,26 +89,21 @@ Optional:
 
 ## Manual installation
 
-All pre-built files needed to use Selectize can be found in the
-["dist"](dist/) folder.
+Pre-built files are generated during the release build and included in the
+published npm package. After installing the package, they are available under
+`node_modules/@coderevivehq/selectize/dist/`.
+
+The repository intentionally does not commit generated `lib/` or `dist/`
+directories. Run `npm run build` before using a local checkout as a package.
 
 If you're looking to get started with minimal fuss, include
 `selectize.min.js` (bundles Sifter and Microplugin
 dependencies – also available un-minified for debugging, just remove the
 `.min` part) and `css/selectize.default.css`.
 
-- [**js/**](dist/js)
-  - [selectize.js](dist/js/selectize.js): With dependencies, except jQuery
-  - [selectize.min.js](dist/js/selectize.min.js): With dependencies, except jQuery
-- [**scss/**](dist/scss): Sass source files for customization
-- [**less/**](dist/less): Less source files for customization
-- [**css/**](dist/css)
-  - [selectize.css](dist/css/selectize.css): Core styles
-  - [selectize.default.css](dist/css/selectize.default.css): Default theme with core styles
-  - [selectize.bootstrap2.css](dist/css/selectize.bootstrap2.css) - Bootstrap 2 theme
-  - [selectize.bootstrap3.css](dist/css/selectize.bootstrap3.css) - Bootstrap 3 theme
-  - [selectize.bootstrap4.css](dist/css/selectize.bootstrap4.css) - Bootstrap 4 theme
-  - [selectize.bootstrap5.css](dist/css/selectize.bootstrap5.css) - Bootstrap 5 theme
+- `dist/js/` contains the JavaScript builds.
+- `dist/css/` contains the compiled styles and themes.
+- `dist/scss/` and `dist/less/` contain generated style sources for customization.
 
 ## Usage
 
@@ -116,7 +111,7 @@ dependencies – also available un-minified for debugging, just remove the
 $("select").selectize(options);
 ```
 
-The available options are [documented here](https://selectize.dev/docs/api).
+The available options are documented in the [project documentation](https://github.com/coderevivehq/selectize.js/tree/master/docs).
 
 ## Contributing
 
@@ -151,8 +146,8 @@ You can then run the examples at `https://loopback.website:4000/`.
 
 ## License
 
-Copyright &copy; 2013–2016 [Brian Reavis](http://twitter.com/brianreavis) & [Contributors](https://github.com/selectize/selectize.js/graphs/contributors)\
-Copyright &copy; 2020-2022 Selectize Team & [Contributors](https://github.com/selectize/selectize.js/graphs/contributors)
+Copyright &copy; 2013–2016 [Brian Reavis](http://twitter.com/brianreavis) & [Contributors](https://github.com/coderevivehq/selectize.js/graphs/contributors)\
+Copyright &copy; 2020-2022 Selectize Team & [Contributors](https://github.com/coderevivehq/selectize.js/graphs/contributors)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at: <http://www.apache.org/licenses/LICENSE-2.0>
 

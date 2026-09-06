@@ -13,6 +13,7 @@
   ],
   "main": "dist/js/selectize.js",
   "browser": "dist/js/selectize.js",
+  "types": "index.d.ts",
   "description": "Community-maintained fork of Selectize, a jQuery-based custom select UI control.",
   "version": "0.15.4",
   "author": "Brian Reavis <brian@thirdroute.com>",
@@ -32,7 +33,8 @@
     "access": "public"
   },
   "files": [
-    "dist/*"
+    "dist/*",
+    "index.d.ts"
   ],
   "devDependencies": {
     "@risadams/gulp-wrapper": "1.0.0",
@@ -87,7 +89,7 @@
     "test": "karma start",
     "build": "gulp",
     "prepack": "npm run build",
-    "clean": "rm -rf dist coverage node_modules docs/node_modules && cd docs && npm run clear",
+    "clean": "rm -rf dist lib coverage node_modules docs/node_modules && cd docs && npm run clear",
     "docs": "gulp docs",
     "start": "cd docs && HTTPS=true SSL_CRT_FILE=.ssl/loopback_website.crt SSL_KEY_FILE=.ssl/loopback_website.key npm run start -- --host=loopback.website --port=4000",
     "start:windows": "cd docs && SET HTTPS=true && SET SSL_CRT_FILE=.ssl/loopback_website.crt && SET SSL_KEY_FILE=.ssl/loopback_website.key && npm run start -- --host=loopback.website --port=4000",
@@ -95,6 +97,6 @@
     "watch:windows": "concurrently \"gulp watch\" \"npm run start:windows\""
   },
   "engines": {
-    "node": "*"
+    "node": ">=20"
   }
 }

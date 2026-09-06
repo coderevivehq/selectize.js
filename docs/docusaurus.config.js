@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Selectize',
-  tagline: '',
+  title: 'Selectize · CodeReviveHQ',
+  tagline: 'A maintained community continuation of Selectize.',
   url: 'https://selectize.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'selectize', // Usually your GitHub org/user name.
-  projectName: 'selectize', // Usually your repo name.
+  organizationName: 'coderevivehq', // Usually your GitHub org/user name.
+  projectName: 'selectize.js', // Usually your repo name.
   deploymentBranch: 'gh-pages', // Branch that GitHub pages will deploy from.
   trailingSlash: false, // GitHub pages doesn't support trailing slashes.
 
@@ -63,16 +63,11 @@ const config = {
         pages: {
           remarkPlugins: [require('@docusaurus/remark-plugin-npm2yarn')],
         },
-        gtag: {
-          trackingID: 'G-QL249YEJYD',
-          anonymizeIP: true,
-        },
       }),
     ],
   ],
 
   plugins: [
-    'docusaurus-plugin-google-adsense',
     '@docusaurus/theme-live-codeblock',
     async function loadTailwindCss() {
       return {
@@ -150,8 +145,8 @@ const config = {
           //   type: 'localeDropdown',
           //   position: 'right',
           // },
-          { href: 'https://github.com/selectize/selectize.js/discussions', label: 'Community', position: 'right' },
-          { href: 'https://github.com/selectize/selectize.js', label: 'GitHub', position: 'right', },
+          { href: 'https://github.com/coderevivehq/selectize.js/discussions', label: 'Community', position: 'right' },
+          { href: 'https://github.com/coderevivehq/selectize.js', label: 'GitHub', position: 'right', },
         ],
       },
       footer: {
@@ -198,11 +193,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/selectize/selectize.js',
-              },
-              {
-                label: "Keybase",
-                href: "https://keybase.io/team/selectize",
+                href: 'https://github.com/coderevivehq/selectize.js',
               },
               {
                 label: "Stackoverflow",
@@ -217,26 +208,10 @@ const config = {
                 label: 'License',
                 to: '/license',
               },
-              {
-                label: 'Code of Conduct',
-                to: '/code-of-conduct',
-              },
-              {
-                label: 'Privacy Policy',
-                href: '/privacy-policy',
-              },
-              // {
-              //   label: 'Data Policy',
-              //   href: 'https://github.com/selectize/selectize.js',
-              // },
-              // {
-              //   label: 'Cookie Policy',
-              //   href: 'https://github.com/selectize/selectize.js',
-              // },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Selectize team.`,
+        copyright: `Copyright © ${new Date().getFullYear()} CodeReviveHQ.`,
       },
       prism: {
         theme: lightCodeTheme,

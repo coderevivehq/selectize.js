@@ -24,7 +24,7 @@ const { src, dest, series, watch, parallel } = require('gulp');
 // ----------------------------------------
 // Internal task definitions
 // ----------------------------------------
-const cleanLibs = async () => del('dist/**/*');
+const cleanGenerated = async () => del(['dist/**/*', 'lib/**/*']);
 const loadDependencies = async () => await _copyLibs();
 const copyDependencies = async () => src(['lib/**/*']).pipe(dest('dist/lib'));
 const copySrc = async () => {
@@ -112,7 +112,7 @@ async function* getFiles(dir) {
 
 const license_header = `/**
  * Selectize (v@@version)
- * https://selectize.dev
+ * https://github.com/coderevivehq/selectize.js
  *
  * Copyright (c) 2013-2015 Brian Reavis & contributors
  * Copyright (c) 2020-@@YEAR Selectize Team & contributors
@@ -274,7 +274,7 @@ const _minifyScripts = async (scripts) =>
     .pipe(dest('dist/js'));
 
 // public task definitions
-exports.default = series(copyDependencies, copySrc);
+exports.default = series(cleanGenerated, loadDependencies, copyDependencies, copySrc);
 exports.docs = parallel(generateJsDoc, forwardToDocs);
-exports.loadDependencies = series(cleanLibs, loadDependencies);
+exports.loadDependencies = series(cleanGenerated, loadDependencies);
 exports.watch = series(watchFiles);

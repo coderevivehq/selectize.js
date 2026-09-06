@@ -2,6 +2,8 @@
 .DAV
 node_modules
 bower_components
+lib/
+dist/
 *.log
 .vscode
 build

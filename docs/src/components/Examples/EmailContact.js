@@ -17,7 +17,7 @@ export default function EmailContact() {
       labelField: "name",
       searchField: ["name", "email"],
       options: [
-        { email: "selectize@risadams.com", name: "Ris Adams" },
+        { email: "ris@example.com", name: "Ris Adams" },
         { email: "brian@thirdroute.com", name: "Brian Reavis" },
         { email: "nikola@tesla.com", name: "Nikola Tesla" },
         { email: "someone@gmail.com" },
