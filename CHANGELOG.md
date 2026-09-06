@@ -3,6 +3,13 @@
 <!-- Feel free to put either your handle and/or full name, according to
      your privacy needs -->
 
+## v0.15.4 · 06 09 2026
+
+- Adds CodeReviveHQ branding and maintenance information to the README.
+- Adds jsDelivr links that follow the latest npm release.
+- Streamlines CI across supported Node.js versions and Windows.
+- Updates Mocha and serialize-javascript with upstream security fixes.
+
 ## v0.15.3 · 06 09 2026
 
 - First CodeReviveHQ maintained release under `@coderevivehq/selectize`.
