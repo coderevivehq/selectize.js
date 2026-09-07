@@ -48,8 +48,8 @@ jobs:
             exit 1
           fi
 
-          git fetch origin master
-          git merge-base --is-ancestor "$GITHUB_SHA" origin/master
+          git fetch origin main
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main
 
       - name: Install locked dependencies without lifecycle scripts
         run: npm ci --ignore-scripts
@@ -126,8 +126,15 @@ jobs:
       - name: Publish to npm with provenance
         if: steps.npm-version.outputs.published != 'true'
         shell: bash
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           package_files=(coderevivehq-selectize-*.tgz)
+
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "NPM_TOKEN is unavailable. Grant this repository access to the organization secret."
+            exit 1
+          fi
 
           if [ "${#package_files[@]}" -ne 1 ] || [ ! -f "${package_files[0]}" ]; then
             echo "Expected exactly one package archive."
